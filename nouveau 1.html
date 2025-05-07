@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SportTV - Accueil</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00ff88;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: #00ff88;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 2rem;
+      text-align: center;
+      background: linear-gradient(to bottom right, #121212, #1f1f1f);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      color: #ccc;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .channel-logos {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .channel {
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 180px;
+    }
+
+    .channel:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ff88aa;
+    }
+
+    .channel img {
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+      max-width: 100%;
+    }
+
+    .channel span {
+      display: block;
+      font-size: 1rem;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .channel {
+        width: 100%;
+        max-width: 220px;
+      }
+      .channel img {
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">SportTV</div>
+    <div class="nav-links">
+      <a href="#">Accueil</a>
+      <a href="#">Chaînes</a>
+      <a href="#">À propos</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Regarde le sport en direct</h1>
+    <p>Choisis ta chaîne et profite du match comme si tu y étais.</p>
+    <div class="channel-logos">
+      <a href="file:///C:/Users/Aurele/Desktop/Nouveau%20dossier/canal.html" class="channel">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/3/3b/C%2B_Foot.png" alt="Canal+ Foot">
+        <span>Canal+ Foot</span>
+      </a>
+      <a href="file:///C:/Users/Aurele/Desktop/Nouveau%20dossier/bein1.html" class="channel">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Logo_beIN_SPORTS_1.png/1200px-Logo_beIN_SPORTS_1.png" alt="beIN Sports 1">
+        <span>beIN Sports 1</span>
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>

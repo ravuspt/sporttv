@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>beIN Sports 1 - Live</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00ff88;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: #00ff88;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #00ff88;
+    }
+
+    .video-player {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px #00ff88aa;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #00ff88;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn-back:hover {
+      background: #00cc6a;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="file:///C:/Users/Aurele/Desktop/Nouveau%20dossier/nouveau%201.html#" class="logo">SportTV</a>
+    <div class="nav-links">
+      <a href="file:///C:/Users/Aurele/Desktop/Nouveau%20dossier/nouveau%201.html#">Accueil</a>
+      <a href="#">Chaînes</a>
+      <a href="#">À propos</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>beIN Sports 1 - Live</h1>
+    <div class="video-player">
+      <iframe src="https://play.frembed.ink/api/player.php?id=8" allowfullscreen></iframe>
+    </div>
+    <a class="btn-back" href="file:///C:/Users/Aurele/Desktop/Nouveau%20dossier/nouveau%201.html#">← Retour</a>
+  </div>
+
+</body>
+</html>
